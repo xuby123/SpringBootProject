@@ -1,0 +1,10 @@
+#端口
+server:
+  port: 8081
+
+
+#应用名称
+spring:
+  application:
+    name: springboot-project
+
