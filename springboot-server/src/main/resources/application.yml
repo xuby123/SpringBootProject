@@ -1,0 +1,11 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    registerWithEureka: false     #是否注册自己的信息到EurekaServer，默认是true  这个就是EurekaServer
+    fetchRegistry: false          #是否拉取其他服务的注册表，默认是true  这个是单节点，不需要同步EurekaServer节点数据
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

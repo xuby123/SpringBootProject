@@ -1,7 +1,10 @@
 package com.joe;
 
+import com.joe.model.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  *<p>功能描述: SpringBoot入口</p >
@@ -14,6 +17,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *</ul>
 */
 @SpringBootApplication
+@EnableConfigurationProperties({User.class})
+@EnableEurekaClient
 public class SpringbootDemoApplication {
 
     public static void main(String[] args) {
